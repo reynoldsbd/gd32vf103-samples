@@ -1,0 +1,23 @@
+[package]
+name = "polos-alef-rust"
+version = "0.0.0"
+authors = ["Bobby Reynolds <bobby@reynoldsbd.net>"]
+edition = "2018"
+
+[dependencies]
+embedded-hal = "0.2"
+gd32vf103xx-hal = "0.2"
+gd32vf103-pac = "0.2"
+nb = "0.1"
+panic-halt = "0.2"
+riscv = "0.5"
+riscv-rt = "0.6"
+
+[[bin]]
+name = "blinky"
+path = "src/blinky.rs"
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
