@@ -20,7 +20,7 @@ Prerequisites:
 * Stable Rust w/ `riscv32imac-unknown-none-elf` target
 * [Nuclei RISC-V toolchain] (needed only for objcopy)
 * [Modified dfu-util] with support for GD32V bootloader
-  * As noted in the release notes, Windows users must also use [Zadig] to
+  * As mentioned in the release notes, Windows users must also use [Zadig] to
     configure WinUSB for the enumerated USB bootloader
 
 To build and flash *blinky*:
@@ -33,6 +33,7 @@ dfu-util -d 28e9:0189 -a 0 --dfuse-address 0x08000000:leave -D blinky.bin
 
 [Nuclei RISC-V toolchain]: https://nucleisys.com/download.php
 [Modified dfu-util]: https://github.com/riscv-mcu/gd32-dfu-utils
+[Zadig]: https://zadig.akeo.ie/
 
 # License
 
