@@ -17,6 +17,10 @@ riscv-rt = "0.6"
 name = "blinky"
 path = "src/blinky.rs"
 
+[[bin]]
+name = "hello"
+path = "src/hello.rs"
+
 [profile.release]
 codegen-units = 1
 debug = true

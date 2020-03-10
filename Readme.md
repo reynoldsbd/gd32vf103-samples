@@ -7,6 +7,7 @@ development board. All of these build on foundational crates provided by the
 Available examples:
 
 * [*blinky*](./src/blinky.rs)
+* [*hello*](./src/hello.rs)
 
 [Polos Alef]: https://www.analoglamb.com/product/polos-gd32v-alef-board-risc-v-mcu-board/
 [Rust Embedded Working Group]: https://github.com/rust-embedded/wg
