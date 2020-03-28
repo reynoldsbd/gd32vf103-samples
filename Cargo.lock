@@ -46,10 +46,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "gd32vf103-samples"
+version = "0.0.0"
+dependencies = [
+ "embedded-hal",
+ "gd32vf103-pac",
+ "gd32vf103xx-hal",
+ "nb",
+ "panic-halt",
+ "riscv",
+ "riscv-rt",
+]
+
+[[package]]
 name = "gd32vf103xx-hal"
 version = "0.2.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "05e6cdcd5eb9e52318d76473ff72420d606f1c28168df3db1513d6b40318bc25"
 dependencies = [
  "cast",
  "embedded-hal",
@@ -71,19 +82,6 @@ name = "panic-halt"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "de96540e0ebde571dc55c73d60ef407c653844e6f9a1e2fdbd40c07b9252d812"
-
-[[package]]
-name = "polos-alef-rust"
-version = "0.0.0"
-dependencies = [
- "embedded-hal",
- "gd32vf103-pac",
- "gd32vf103xx-hal",
- "nb",
- "panic-halt",
- "riscv",
- "riscv-rt",
-]
 
 [[package]]
 name = "proc-macro2"

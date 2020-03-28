@@ -1,12 +1,12 @@
 [package]
-name = "polos-alef-rust"
+name = "gd32vf103-samples"
 version = "0.0.0"
 authors = ["Bobby Reynolds <bobby@reynoldsbd.net>"]
 edition = "2018"
 
 [dependencies]
 embedded-hal = "0.2"
-gd32vf103xx-hal = "0.2"
+gd32vf103xx-hal = { path = "gd32vf103xx-hal" }
 gd32vf103-pac = "0.2"
 nb = "0.1"
 panic-halt = "0.2"

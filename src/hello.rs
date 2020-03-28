@@ -8,6 +8,7 @@ extern crate panic_halt;
 use core::fmt::Write;
 
 use gd32vf103_pac::Peripherals;
+use gd32vf103xx_hal::afio::AfioExt;
 use gd32vf103xx_hal::gpio::GpioExt;
 use gd32vf103xx_hal::rcu::RcuExt;
 use gd32vf103xx_hal::serial::{Config, Serial};
@@ -22,13 +23,15 @@ fn main() -> !
     let mut rcu = peripherals.RCU.configure()
         .freeze();
 
+    let mut afio = peripherals.AFIO.constrain(&mut rcu);
+
     let gpioa = peripherals.GPIOA.split(&mut rcu);
-    let tx = gpioa.pa9.into_alternate_push_pull();
-    let rx = gpioa.pa10.into_floating_input();
+    let tx = gpioa.pa9;
+    let rx = gpioa.pa10;
 
     let config = Config::default()
         .baudrate(115_200.bps());
-    let serial = Serial::usart0(peripherals.USART0, (tx, rx), config, &mut rcu);
+    let serial = Serial::new(peripherals.USART0, (tx, rx), config, &mut afio, &mut rcu);
     let (mut tx, _) = serial.split();
 
     let _ = write!(tx, "Hello, world!\r\n");
