@@ -21,6 +21,10 @@ path = "src/blinky.rs"
 name = "hello"
 path = "src/hello.rs"
 
+[[bin]]
+name = "echo"
+path = "src/echo.rs"
+
 [profile.release]
 codegen-units = 1
 debug = true
