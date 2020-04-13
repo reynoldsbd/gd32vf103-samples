@@ -9,6 +9,7 @@ Available examples:
 * [*blinky*](./src/blinky.rs)
 * [*hello*](./src/hello.rs)
 * [*echo*](./src/echo.rs)
+* [*interrupt*](./src/interrupt.rs)
 
 [GD32VF103 MCU]: https://www.gigadevice.com/products/microcontrollers/gd32/risc-v/
 [Rust Embedded Working Group]: https://github.com/rust-embedded/wg

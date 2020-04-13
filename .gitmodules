@@ -1,3 +1,0 @@
-[submodule "gd32vf103xx-hal"]
-	path = gd32vf103xx-hal
-	url = https://github.com/riscv-rust/gd32vf103xx-hal
